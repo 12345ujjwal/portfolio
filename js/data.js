@@ -5,7 +5,7 @@ const PORTFOLIO = {
   role: "Cloud and DevOps Engineer in the making",
   summary: "B.Tech Computer Science student who builds and ships AWS solutions, from architecture to deployment, backed by a six-month DevOps internship.",
   email: "12345ujjwalpratap@gmail.com",
-  chatApi: "https://abc123.execute-api.ap-south-1.amazonaws.com/chat",  
+  chatApi: "https://3ka58eu1tc.execute-api.ap-south-1.amazonaws.com/chat",  
   chatPrompts: ["What has Ujjwal built with AWS Bedrock?", "Tell me about his DevOps internship", "Which cloud skills does he have?"],
   repo: "12345ujjwal/portfolio",   
   nodes: {
