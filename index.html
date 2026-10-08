@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ujjwal Pratap Singh | Cloud &amp; DevOps Engineer</title>
+<meta name="description" content="Portfolio of Ujjwal Pratap Singh, a B.Tech CSE student and AWS Community Builder focused on cloud and DevOps.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body id="top">
+<header class="bar">
+  <div class="wrap bar-in">
+    <a class="brand" href="#top">Ujjwal Pratap Singh</a>
+    <nav id="menu" aria-label="Main">
+      <a href="#about">About</a><a href="#skills">Skills</a><a href="#architecture">Architecture</a><a href="#projects">Projects</a>
+      <a href="#experience">Experience</a><a href="#achievements">Achievements</a><a href="#contact">Contact</a>
+    </nav>
+    <button id="cmdk" class="icon" aria-label="Open quick search (Ctrl K)">Jump to</button>
+    <button id="theme" class="icon" aria-label="Switch light or dark theme">Theme</button>
+    <button id="burger" class="icon" aria-label="Open menu" aria-expanded="false">Menu</button>
+  </div>
+</header>
+
+<main>
+<section class="hero wrap">
+  <div class="hero-text">
+    <h1 data-t="name"></h1>
+    <p class="role" data-t="role"></p>
+    <p class="lede" data-t="summary"></p>
+    <div class="actions">
+      <a class="btn primary" href="#projects">View projects</a>
+      <a class="btn" id="resume" href="#" download>Download resume</a>
+    </div>
+    <a id="deploy" class="deploy" href="#" target="_blank" rel="noopener" hidden></a>
+  </div>
+  <div class="term">
+    <div class="term-bar">ujjwal@portfolio: ~</div>
+    <div id="term-out" class="term-out" role="log" aria-live="polite"></div>
+    <div class="term-chips" id="term-chips"></div>
+    <label class="term-in"><span class="prompt">$</span><input id="term-input" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Type a command, for example help"></label>
+  </div>
+</section>
+
+<section id="about" class="wrap sec"><h2>About</h2><div id="about-body" class="about"></div></section>
+<section id="skills" class="wrap sec"><h2>Skills</h2><div id="skills-body" class="skills"></div></section>
+<section id="architecture" class="wrap sec"><h2>Architecture</h2>
+  <div class="arch"><figure class="diagram">
+    <svg viewBox="0 0 560 270" role="img" aria-label="Architecture diagram: visitor to CloudFront to S3 is live; admin to API Gateway and Lambda to DynamoDB is planned">
+      <g class="node" tabindex="0" role="button" data-node="visitor"><rect x="10" y="42" width="96" height="56" rx="6"/><text x="58" y="75">Visitor</text></g>
+      <g class="node live" tabindex="0" role="button" data-node="cloudfront"><rect x="190" y="42" width="130" height="56" rx="6"/><text x="255" y="75">CloudFront</text></g>
+      <g class="node live" tabindex="0" role="button" data-node="s3"><rect x="410" y="42" width="140" height="56" rx="6"/><text x="480" y="75">S3 static site</text></g>
+      <path class="flow" d="M106 70H190"/><path class="flow" d="M320 70H410"/>
+      <text class="cap" x="10" y="22">This website</text>
+      <g class="node plan" tabindex="0" role="button" data-node="admin"><rect x="10" y="182" width="96" height="56" rx="6"/><text x="58" y="215">Admin</text></g>
+      <g class="node plan" tabindex="0" role="button" data-node="api"><rect x="190" y="182" width="130" height="56" rx="6"/><text x="255" y="209">API Gateway</text><text x="255" y="227">+ Lambda</text></g>
+      <g class="node plan" tabindex="0" role="button" data-node="dynamodb"><rect x="410" y="182" width="140" height="56" rx="6"/><text x="480" y="215">DynamoDB</text></g>
+      <path class="dash" d="M106 210H190"/><path class="dash" d="M320 210H410"/>
+      <text class="cap" x="10" y="162">Planned: admin panel</text>
+    </svg>
+    <figcaption>Select a service to see why it is there</figcaption>
+  </figure>
+    <div id="node-info" class="node-info" aria-live="polite"></div></div></section>
+<section id="projects" class="wrap sec"><h2>Projects</h2><div id="projects-body"></div></section>
+<section id="experience" class="wrap sec"><h2>Experience</h2><ol id="exp-body" class="timeline"></ol></section>
+<section id="achievements" class="wrap sec"><h2>Achievements, education and certificates</h2><div id="ach-body" class="grid3"></div></section>
+<section id="contact" class="wrap sec"><h2>Contact</h2>
+  <p class="lede">Open to cloud and DevOps roles. The quickest way to reach me is email.</p>
+  <div class="actions" id="contact-body"></div>
+</section>
+</main>
+<footer class="wrap foot"><span>&copy; <span id="year"></span> Ujjwal Pratap Singh</span><span>Hosted on AWS</span></footer>
+
+<dialog id="palette" aria-label="Quick search"><input id="pal-q" autocomplete="off" placeholder="Type to search, for example projects" aria-label="Search actions"><ul id="pal-list" role="listbox"></ul></dialog>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+<script src="js/extras.js"></script>
+</body>
+</html>
