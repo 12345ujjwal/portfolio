@@ -4,7 +4,8 @@ import os
 import boto3
 
 bedrock = boto3.client("bedrock-runtime")
-MODEL_ID = os.environ["MODEL_ID"]
+MODEL_ID = "global.anthropic.claude-haiku-4-5-20251001-v1:0"
+#MODEL_ID = os.environ["MODEL_ID"]
 with open(os.path.join(os.path.dirname(__file__), "knowledge.txt"), encoding="utf-8") as f:
     SYSTEM = f.read()
 
