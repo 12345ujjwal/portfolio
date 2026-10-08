@@ -115,3 +115,21 @@ h1{font-size:clamp(2.2rem,5vw,3.6rem);font-weight:700;letter-spacing:-.02em;marg
 
 @media (max-width:860px){.arch{grid-template-columns:1fr}.term-in input{font-size:16px}}
 @media (max-width:520px){#cmdk{display:none}}
+
+/* AI chat */
+.chat-fab{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:20;background:var(--accent);color:var(--on-accent);border:0;border-radius:999px;padding:12px 20px;font:500 1rem "IBM Plex Sans",sans-serif;cursor:pointer;box-shadow:0 6px 20px rgba(0,0,0,.35)}
+.chat{position:fixed;right:16px;bottom:calc(72px + env(safe-area-inset-bottom,0px));z-index:20;width:min(380px,calc(100vw - 32px));max-height:min(560px,calc(100vh - 110px));display:flex;flex-direction:column;background:var(--panel);border:1px solid var(--line);border-radius:8px;box-shadow:0 12px 40px rgba(0,0,0,.4)}
+.chat[hidden]{display:none}
+.chat-head{display:flex;justify-content:space-between;align-items:center;padding:10px 14px;border-bottom:1px solid var(--line)}
+.chat-log{flex:1;min-height:120px;overflow:auto;padding:12px 14px;display:flex;flex-direction:column;gap:10px}
+.msg{max-width:88%;padding:8px 12px;border-radius:6px;font-size:.93rem;line-height:1.5;white-space:pre-wrap;overflow-wrap:anywhere}
+.msg.bot{background:var(--bg);align-self:flex-start}
+.msg.user{background:var(--accent);color:var(--on-accent);align-self:flex-end}
+.msg.err{color:var(--warm)}
+.chat-chips{padding:0 14px 8px}
+.chat-chips .chip-btn{color:var(--text);border-color:var(--line);text-align:left}
+.chat-note{margin:0 14px 8px;font-size:.78rem}
+.chat-form{display:flex;gap:8px;padding:10px 14px;border-top:1px solid var(--line)}
+.chat-form input{flex:1;min-width:0;background:var(--bg);color:var(--text);border:1px solid var(--line);border-radius:4px;padding:8px 10px;font:inherit;font-size:16px}
+.chat-form .btn{padding:8px 14px;cursor:pointer}
+.chat-form .btn:disabled{opacity:.6;cursor:wait}

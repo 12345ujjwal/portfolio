@@ -5,7 +5,9 @@ const PORTFOLIO = {
   role: "Cloud and DevOps Engineer in the making",
   summary: "B.Tech Computer Science student who builds and ships AWS solutions, from architecture to deployment, backed by a six-month DevOps internship.",
   email: "12345ujjwalpratap@gmail.com",
-  repo: "12345ujjwal/portfolio",   // GitHub repo that deploys this site (used by the deploy badge). Change to your real repo name.
+  chatApi: "https://abc123.execute-api.ap-south-1.amazonaws.com/chat",  
+  chatPrompts: ["What has Ujjwal built with AWS Bedrock?", "Tell me about his DevOps internship", "Which cloud skills does he have?"],
+  repo: "12345ujjwal/portfolio",   
   nodes: {
     visitor: { title: "Visitor", text: "A browser asks for the site over HTTPS. DNS for the custom domain is handled by Route 53.", status: "Live" },
     cloudfront: { title: "CloudFront", text: "CDN in front of the bucket. It serves the site over HTTPS from edge locations, caches files, and is the only way in: the bucket itself stays private through Origin Access Control.", status: "Live" },
